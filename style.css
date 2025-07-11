@@ -1,0 +1,403 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "TikTok Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100;
+    margin: 0;
+    background-color: #f9fafc;
+    color: #333;
+}
+
+.separator {
+    width: 900px;
+    height: 4px;
+    background: linear-gradient(to right, #003366);
+    border-radius: 2px;
+    margin: 20px auto;
+}
+
+.apartado h2 {
+    color: #003366;
+    font-family: "TikTok Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-weight: bold;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100;
+    margin-top: auto;
+    font-size: 2em;
+}
+
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 15px;
+    margin-top: auto;
+    font-size: 3em;
+    font-family: "TikTok Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: italic;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100;
+}
+
+
+/* =============  BIENVENIDA ============= */
+
+.nombre-clinica {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #003366
+}
+
+.bienvenida {
+    color: #000000;
+    font-family: "TikTok Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100;
+}
+
+/* ============= HEADER / MENÚ SUPERIOR ============= */
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #003049;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* ============= SECCIÓN HERO / BIENVENIDA ============= */
+.hero {
+    position: relative;
+    background-image: url('imagenes/consultorio.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.hero-overlay {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px 40px;
+    text-align: justify;
+    max-width: 700px;
+}
+
+.hero-overlay h1 {
+    text-align: center;
+    color: #003366;
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.nombre-clinica {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #003366;
+}
+
+.hero-overlay .bienvenida {
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+/* ============= SECCIÓN SERVICIOS ============= */
+.servicios-section {
+    background-color: #003049;
+    padding: 60px 0;
+    width: 100%;
+}
+
+.servicios-section h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.servicios {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.servicio-card {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    max-width: 22%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.servicio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.servicio-card h3 {
+    color: #003049;
+    margin: 10px 0;
+    font-weight: bold;
+     font-size: 1.5em;
+}
+
+.servicio-card p {
+    padding: 0 10px 15px;
+    font-size: 1em;
+    color: #000000;
+}
+
+/* ============= SECCIÓN AGENDAR CITA ============= */
+.agendar-contenedor {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card-columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex: 2;
+}
+
+.resumen {
+    flex: 1;
+    max-width: 250px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.card h3 {
+    color: #003049;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.btn-primary,
+.btn-check {
+    margin-top: 10px;
+    background-color:  #ffcc00;
+    color: #000000;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover,
+.btn-check:hover {
+    background-color: #003049;
+}
+
+#disponibilidad {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.resumen p {
+    margin: 6px 0;
+    font-size: 1em;
+}
+
+/* ============= SECCIÓN ESPECIALISTAS ============= */
+.especialistas-section {
+    text-align: center;
+    margin-top: auto;
+}
+
+.especialistas-section h2 {
+    color: #003049;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.especialistas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+}
+
+.especialista-card {
+    background: #003049;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.especialista-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 45%;
+    margin-bottom: 10px;
+}
+
+.especialista-card h3 {
+    color:#ffffff;
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.especialista-card p {
+    font-size: 0.9em;
+    margin: 4px 0;
+    color: #ffffff;
+}
+
+/* ============= SECCIÓN MAPA ============= */
+.mapa-section {
+    background: #f8f9fa;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.mapa-section h2 {
+    color: #003049;
+    font-size: 2em;
+}
+
+.mapa-section p {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.mapa-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= FOOTER ============= */
+.footer {
+    background-color: #003049;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #ffcc00;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}

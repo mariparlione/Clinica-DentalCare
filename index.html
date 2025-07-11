@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental Care</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Apartado 1: Header -->
+    <header class="header">
+        <div class="logo">DentalCare</div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#agendar">Agendar cita</a></li>
+                <li><a href="#especialistas">Especialistas</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Apartado 2: Bienvenida -->
+    <section class="apartado hero">
+        <div class="hero-overlay">
+            <p class="bienvenida">
+            <section class="apartado">
+                <h1>Clínica odontológica<br> <span class="nombre-clinica">Dental Care</span></h1>
+                Bienvenido a nuestra clínica odontológica, donde ofrecemos atención integral y personalizada para el
+                cuidado de tu salud bucal. Nuestro equipo de especialistas está preparado para realizar limpiezas,
+                extracciones y tratamientos de ortodoncia con los más altos estándares de calidad.
+                </p>
+        </div>
+    </section>
+    <div class="separator"></div>
+
+    <!-- Apartado 3: Servicios -->
+    <div id="servicios" class="servicios-section">
+        <section class="apartado">
+            <h2>Nuestros servicios</h2>
+            <div class="servicios">
+                <div class="servicio-card">
+                    <img src="imagenes/limpieza.jpg" alt="Limpieza dental">
+                    <h3>Limpieza</h3>
+                    <p>Eliminación de placa y sarro para mantener dientes y encías saludables.</p>
+                </div>
+                <div class="servicio-card">
+                    <img src="imagenes/extraccion.jpg" alt="Extracción dental">
+                    <h3>Extracción</h3>
+                    <p>Procedimiento seguro y cuidadoso para retirar piezas dentales dañadas.</p>
+                </div>
+                <div class="servicio-card">
+                    <img src="imagenes/ortodoncia.jpg" alt="Ortodoncia">
+                    <h3>Ortodoncia</h3>
+                    <p>Tratamientos para alinear tus dientes y brindarte una sonrisa más estética.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div class="separator"></div>
+
+    <!-- Apartado 4: Agendar Cita -->
+    <div id="agendar" class="container">
+        <section class="apartado">
+            <h2>Agendar tu consulta</h2>
+            <p class="bienvenida">
+                Antes de tu consulta, completa tus datos personales para agilizar tu atención. Podrás
+                seleccionar el tipo de servicio que necesitas, registrar la fecha deseada y verificar de inmediato
+                si hay citas
+                disponibles en nuestra agenda. <br><b>¡Queremos brindarte un servicio rápido, seguro y cómodo!.</b>
+            </p>
+
+            <div class="agendar-contenedor">
+                <div class="card card-columns">
+                    <div class="column">
+                        <h3>Datos Personales</h3>
+                        <label>Nombre:<input type="text" name="nombre" required></label>
+                        <label>Apellido:<input type="text" name="apellido" required></label>
+                        <label>Cédula:<input type="text" name="cedula" required></label>
+                        <label>Teléfono:<input type="tel" name="telefono"></label>
+                    </div>
+
+                    <div class="column">
+                        <h3>Trabajo a Realizar</h3>
+                        <label><input type="checkbox" name="servicio" value="limpieza"> Limpieza ($30)</label>
+                        <label><input type="checkbox" name="servicio" value="extraccion"> Extracción ($50)</label>
+                        <label><input type="checkbox" name="servicio" value="ortodoncia"> Ortodoncia ($100)</label>
+                    </div>
+
+                    <div class="column">
+                        <h3>Detalles de Consulta</h3>
+                        <label>Fecha de consulta:<input type="date" id="fechaConsulta" required></label>
+                        <button type="button" class="btn-check" onclick="verificarCita()">Verificar
+                            disponibilidad</button>
+                        <p id="disponibilidad"></p>
+                    </div>
+                </div>
+
+                <div class="card resumen">
+                    <h3>Resumen de Pago</h3>
+                    <p>Subtotal: $<span id="subtotal">0.00</span></p>
+                    <p>IVA (12%): $<span id="iva">0.00</span></p>
+                    <p><strong>Total: $<span id="total">0.00</span></strong></p>
+                    <button type="button" class="btn-primary" onclick="calcularTotal()">Calcular Total</button>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+
+        <!-- Apartado 5: Especialistas -->
+        <section id="especialistas" class="container especialistas-section">
+            <h2>Nuestros especialistas</h2>
+            <div class="especialistas-grid">
+                <div class="especialista-card">
+                    <img src="imagenes/doctor.jpg">
+                    <h3>Dr. Juan Pérez</h3>
+                    <p>•Ortodoncia</p>
+                    <p>•Más de 10 años de experiencia en tratamientos de alineación dental.</p>
+                </div>
+                <div class="especialista-card">
+                    <img src="imagenes/doctor2.jpg">
+                    <h3>Dra. María López</h3>
+                    <p>•Endodoncia</p>
+                    <p>•Especialista en tratamientos de conductos y salud pulpar.</p>
+                </div>
+                <div class="especialista-card">
+                    <img src="imagenes/doctor3.jpg">
+                    <h3>Dr. Carlos Gómez</h3>
+                    <p>•Cirugía oral</p>
+                    <p>•Experto en extracciones complejas y cirugía bucal.</p>
+                </div>
+            </div>
+        </section>
+        <div class="separator"></div>
+
+        <!-- Apartado 6: Ubicacion -->
+        <section id="ubicacion" class="mapa-section">
+            <h2>¿Dónde estamos ubicados?</h2>
+            <p>Visítanos en nuestra clínica, te esperamos para brindarte la mejor atención.</p>
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.932462116177!2d-122.08424968469072!3d37.42206597982537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0a5f9d1bb0f%3A0xafe7c2b71e83cd8a!2sGoogleplex!5e0!3m2!1ses!2s!4v1620210710201!5m2!1ses!2s"
+                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+<!-- Apartado 7: Footer -->
+<footer class="footer">
+    <div class="container footer-content">
+        <p>&copy; 2025 Clínica Dental Care. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#agendar">Agendar cita</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#especialistas">Especialistas</a>
+        </div>
+    </div>
+</footer>
+</html>
